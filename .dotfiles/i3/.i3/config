@@ -62,7 +62,7 @@ bindsym $mod+F3 exec pcmanfm
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
-bindsym $mod+Ctrl+t exec --no-startup-id compton -b
+# bindsym $mod+Ctrl+t exec --no-startup-id compton -b
 bindsym $mod+Shift+d --release exec "killall dunst; exec notify-send 'restart dunst'"
 bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
@@ -423,7 +423,7 @@ mode "$mode_gaps_outer" {
 ## Open docuemnts
 bindsym $mod+control+i exec vim ~/Documents/i3cheat.txt
 bindsym $mod+control+v exec vim ~/Documents/VIMCheat.txt
-# bindsym $mod+control+t exec vim ~/Documents/terminalCheat.txt
+bindsym $mod+control+t exec vim ~/Documents/terminalCheat.txt
 
 # Cycle through active workspaces
 bindsym $mod+Tab workspace next
