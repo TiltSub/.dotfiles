@@ -286,6 +286,7 @@ exec --no-startup-id start_conky_maia
 # exec --no-startup-id xautolock -time 10 -locker blurlock
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -421,9 +422,10 @@ mode "$mode_gaps_outer" {
 ####################
 #
 ## Open docuemnts
-bindsym $mod+control+i exec vim ~/Documents/i3cheat.txt
-bindsym $mod+control+v exec vim ~/Documents/VIMCheat.txt
-bindsym $mod+control+t exec vim ~/Documents/terminalCheat.txt
+bindsym $mod+Control+i exec Vim ~/Documents/i3cheat.txt"
+bindsym $mod+Control+v exec kate ~/Documents/VIMCheat.txt"
+bindsym $mod+Control+t exec vim ~/Documents/terminalCheat.txt
+bindsym $mod+Control+g exec vim ~/Documents/GitCheat.txt
 
 # Cycle through active workspaces
 bindsym $mod+Tab workspace next
