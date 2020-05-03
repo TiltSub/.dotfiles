@@ -64,7 +64,7 @@ scroll-down = i3wm-wsprev
 
 modules-left = workspaces xwindow 
 modules-center = date 
-modules-right = mpd filesystem battery volume wireless-network nmeditor blue
+modules-right = mpd battery volume wireless-network nmeditor blue
  
 
 [bar/monitor2]
@@ -106,7 +106,7 @@ scroll-up = i3wm-wsnext
 scroll-down = i3wm-wsprev
 
 modules-left =  
-modules-center = xkeyboard aur_updates filesystem1 memory cpu fan temperature updates-arch-combined
+modules-center = xkeyboard filesystem1 memory cpu fan temperature updates-arch-combined
 modules-right =
  
 separator = "|"
@@ -123,28 +123,15 @@ content-foreground = ${colors.foreground}
 click-left = exec rofi -theme themes/app-launcher -show drun
 
 
-[module/aur_updates]
-type = custom/script
-exec = ~/.config/polybar/scripts/aur_updates.sh
-format-prefix = " "
-format = <label>
-label = %output%
-interval = 180
-
-
 [module/filesystem1]
 type = internal/fs
 interval = 25
 
 mount-0 = /
 
-label-mounted =   %mountpoint%%{F-}: %percentage_used%%
+label-mounted =   %mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground}
-
-
-
-
 
 
 [module/blue]
